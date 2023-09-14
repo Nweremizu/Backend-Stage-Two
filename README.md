@@ -28,3 +28,6 @@ Before you begin, ensure you have met the following requirements:
         # os.environ['DATABASE_URI'] = 'sqlite:///users.db'
     ```
 
+## Usage
+### Running the Api
+
