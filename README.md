@@ -34,4 +34,5 @@ Before you begin, ensure you have met the following requirements:
 
 To run the API, execute the following command from the project directory:
     ```python app.py```
+    
 By default, the API will be accessible at `http://localhost:5000` for a Local DB
