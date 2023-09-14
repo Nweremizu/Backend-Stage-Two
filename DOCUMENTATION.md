@@ -162,6 +162,7 @@ For more information about the API, check out the [Postman Documentation](https:
 - The API assumes that email addresses are unique, and it checks for email uniqueness when creating a new user.
 - Error handling for invalid inputs is limited to basic checks
 -The API does not currently support authentication or authorization for user operations.
+
 ## Setup Instructions
 For detailed instructions on how to set up, run, and use this API, please refer to the
 [README](README.md) file.
