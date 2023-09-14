@@ -46,18 +46,17 @@ def create():
     # Create user
     user = User(name=name, age=age, email=email)
     # Check if email already exists
-    try:
-        db.session.add(user)
-        db.session.commit()
-    except:
-            return jsonify({"error": "Email already exists"}), 400
-    else:
-        return jsonify( success= {
-            'success': 'User created successfully!',
-            'name': name,
-            'age': age,
-            'email': email
-        })
+    if db.session.query(User).filter_by(email=email).first() != None:
+        return jsonify({"error": "Email already exists"}), 400
+    db.session.add(user)
+    db.session.commit()
+    return jsonify({
+        'success': 'User created successfully!',
+        'id': user.id,
+        'name': user.name,
+        'age': user.age,
+        'email': user.email
+    })
 
 
 @app.route('/api/<int:user_id>', methods=['GET'])
