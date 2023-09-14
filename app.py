@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)
 
@@ -19,8 +19,8 @@ class User(db.Model):
     email = db.Column(db.String(100), unique=True)
 
 def create_db():
-        with app.app_context():
-            db.create_all()
+    with app.app_context():
+        db.create_all()
 
 create_db()
 

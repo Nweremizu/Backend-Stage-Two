@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = 'http://127.0.0.1:5000/api'
+BASE_URL = 'https://hngx-stage-two-6m3a.onrender.com/api'
 
 
 def api_create_person(name:str, email:str, age:int):
@@ -34,6 +34,6 @@ def api_delete_person(id:int):
 
 
 
-api_udate_person(2, name='Bruno', email='br1@gmail.com', age=20)
-api_delete_person(3)
-api
+api_create_person(name='Mark', email='br12@gmail.com', age=20)
+api_read_person(id=1)
+
