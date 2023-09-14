@@ -2,39 +2,58 @@ This HNGx CRUD Person REST API. This API allows you to manage
 and interact with a "Person" resource, performing CRUD (Create, Read, Update, Delete)
 operations on individuals' data.
 ## Table of Contents
+- [setup](#setup-instructions)
 - [API Endpoints](#api-endpoints)
 - [Create Person](#create-person)
-- [Get Person Details](#retrieve-a-person)
+- [Get Person Details](#get-person-details)
 - [Update a Person](#update-a-person)
 - [Delete a Person](#delete-a-person)
 - [Request/Response Formats](#requestresponse-formats)
 - [Sample Usage](#sample-usage)
 - [Limitations](#limitations)
-- [Setup Instructions](#setup-instructions)
+## setup instructions
+1. Clone this Repository:
+    (https://github.com/Nweremizu/Backend-Stage-Two.git)
+2. Open your terminal and run
+    ```virtualenv venv```
+3. Activate the virtual environment
+    * On windows, Run:
+        ```venv\Scripts\activate```
+    * On macOS and Linux, Run:
+        ```source venv/bin/activates```
+4. Install the required dependencies
+    ```pip install -r requirements.txt```
+
+5. If you want to work with a local db Just uncomment this code in the app.py
+    ```python
+        # os.environ['DATABASE_URI'] = 'sqlite:///users.db'
+    ```
+6. Run the app
+    ```python app.py```
 ## API Endpoints
-### Create a Person
-- **Endpoint:** `POST /api`
+### Create Person
+- **Endpoint:** `/api`
 - **Description:** Create a new person.
-- **Request Format:**
-- Content-Type: `application/json`
-- Body:
-```json
-{
-"name": "John Doe",
-"email": "john@example.com"
-}
-```
+- **Request Format**
+    - Body:
+    ```json
+    {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "age": 32
+    }
+    ```
 - **Response Format:**
-- Status Code: 201 (Created)
-- Body:
-```json
-{
-"id": 1,
-"name": "John Doe",
-"email": "john@example.com"
-}
-```
-### Retrieve a Person
+    - Status Code: 201 (Created)
+    - Body:
+    ```json
+    {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com"
+    }
+    ```
+### Get Person Details
 - **Endpoint:** `GET /api/<user_id>`
 - **Description:** Retrieve details of a person by their ID.
 - **Request Format:** None required.
