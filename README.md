@@ -2,4 +2,14 @@
 
 ## FLASK CRUD API
     A simple CRUD API with a datbase.
-## INSTALLATION
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Python 3.x installed on your system.
+
+
+### INSTALLATION
+* Clone this Repository:
+    (https://github.com/Nweremizu/Backend-Stage-Two.git)
