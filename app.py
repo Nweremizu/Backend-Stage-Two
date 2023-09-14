@@ -6,6 +6,9 @@ import os
 
 app = Flask(__name__)
 
+# Uncomment the line below if you want to work with a local DB
+# os.environ['DATABASE_URI'] = 'sqlite:///users.db'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

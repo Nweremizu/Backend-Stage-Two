@@ -20,4 +20,11 @@ Before you begin, ensure you have met the following requirements:
         ```venv\Scripts\activate```
     * On macOS and Linux, Run:
         ```source venv/bin/activates```
+4. Install the required dependencies
+    ```pip install -r requirements.txt```
+
+5. If you want to work with a local db Just uncomment this code in the app.py
+    ```python
+        # os.environ['DATABASE_URI'] = 'sqlite:///users.db'
+    ```
 
