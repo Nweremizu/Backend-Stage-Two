@@ -49,8 +49,7 @@ def create():
     try:
         db.session.add(user)
         db.session.commit()
-    except SQLAlchemyError as e:
-        if 'UNIQUE constraint failed' in str(e):
+    except:
             return jsonify({"error": "Email already exists"}), 400
     else:
         return jsonify( success= {

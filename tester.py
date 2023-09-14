@@ -10,7 +10,7 @@ def api_create_person(name:str, email:str, age:int):
         'age': age
     }
     response = requests.post(url=BASE_URL, data=data)
-    print(response.json())
+    print(response.text)
 
 
 def api_read_person(id:int):
@@ -35,5 +35,5 @@ def api_delete_person(id:int):
 
 
 api_create_person(name='Mark', email='br12@gmail.com', age=20)
-api_read_person(id=2)
+api_read_person(id=1)
 
