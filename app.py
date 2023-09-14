@@ -59,7 +59,7 @@ def create():
         'name': user.name,
         'age': user.age,
         'email': user.email
-    })
+    }), 201
 
 
 @app.route('/api/<int:user_id>', methods=['GET'])
@@ -73,7 +73,7 @@ def read(user_id):
         'name': user.name,
         'age': user.age,
         'email': user.email
-    })
+    }), 200
      
 @app.route('/api/<int:user_id>', methods=['PATCH'])
 def update(user_id):
@@ -99,7 +99,7 @@ def update(user_id):
         'name': user.name,
         'age': user.age,
         'email': user.email
-    })
+    }), 200
 
 @app.route('/api/<int:user_id>', methods=['DELETE'])
 def delete(user_id):

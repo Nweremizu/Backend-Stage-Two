@@ -89,7 +89,7 @@ BASE_URL = 'http://localhost:8000/api'
 
 ## Documentation
 
-For more information about the API, check out the [Documentation](https://documenter.getpostman.com/view/12345678/Tz5qZz1o)
+For more information about the API, check out the [Documentation](DOCUMENTATION.md)
 
 ## Built With
 
