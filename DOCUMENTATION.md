@@ -112,9 +112,8 @@ data = {
     "name": "John Doe",
     "email": "john@example.com"
 }
-headers = {"Content-Type": "application/json"}
 
-response = requests.post(url, json=data, headers=headers)
+response = requests.post(url, data=data,)
 print(response.status_code)
 print(response.json())
 ```
@@ -138,7 +137,7 @@ data = {
     "email": "updated_john@example.com"
 }
 
-response = requests.put(url, json=data, headers=headers)
+response = requests.put(url, data=data)
 print(response.status_code)
 print(response.json())
 ```
