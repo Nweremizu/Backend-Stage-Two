@@ -74,4 +74,15 @@ BASE_URL = 'http://localhost:8000/api'
     data ={
         'age': 35 
     }
+    response = requests.patch(url=f'{BASE_URL}/{user_id}', data=data)
+    print(response.json())
+```
+
+* Delete a person from the database
+    #### Endpoint : '/api/<int:user_id>'
+```python
+    user_id = 1
+    BASE_URL = 'http://localhost:8000/api/'
+    response = requests.delete(url=f'{BASE_URL}/{user_id}')
+    print(response.json())
 ```
