@@ -2,7 +2,7 @@ This HNGx CRUD Person REST API. This API allows you to manage
 and interact with a "Person" resource, performing CRUD (Create, Read, Update, Delete)
 operations on individuals' data.
 ## Table of Contents
-- [setup](#setup-instructions)
+- [Setup](#setup-instructions)
 - [API Endpoints](#api-endpoints)
 - [Create Person](#create-person)
 - [Get Person Details](#get-person-details)
@@ -11,7 +11,7 @@ operations on individuals' data.
 - [Request/Response Formats](#requestresponse-formats)
 - [Sample Usage](#sample-usage)
 - [Limitations](#limitations)
-## setup instructions
+## Setup instructions
 1. Clone this Repository:
     (https://github.com/Nweremizu/Backend-Stage-Two.git)
 2. Open your terminal and run
@@ -139,7 +139,6 @@ data = {
     "name": "Updated John Doe",
     "email": "updated_john@example.com"
 }
-headers = {"Content-Type": "application/json"}
 
 response = requests.put(url, json=data, headers=headers)
 print(response.status_code)
