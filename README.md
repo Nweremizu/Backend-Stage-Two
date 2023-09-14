@@ -62,7 +62,7 @@ BASE_URL = 'http://localhost:8000/api'
     ##### Endpoint : '/api/<int:user_id>'
 ```python
     user_id = 1
-    BASE_URL = 'http://localhost:8000/api/'
+    BASE_URL = 'http://localhost:8000/api'
     response = requests.get(url=f'{BASE_URL}/{user_id}')
     print(response.json())
 ```
@@ -70,7 +70,7 @@ BASE_URL = 'http://localhost:8000/api'
     #### Endpoint : '/api/<int:user_id>'
 ```python
     user_id = 1
-    BASE_URL = 'http://localhost:8000/api/'
+    BASE_URL = 'http://localhost:8000/api'
     data ={
         'age': 35 
     }
@@ -82,7 +82,7 @@ BASE_URL = 'http://localhost:8000/api'
     #### Endpoint : '/api/<int:user_id>'
 ```python
     user_id = 1
-    BASE_URL = 'http://localhost:8000/api/'
+    BASE_URL = 'http://localhost:8000/api'
     response = requests.delete(url=f'{BASE_URL}/{user_id}')
     print(response.json())
 ```
