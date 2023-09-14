@@ -109,7 +109,7 @@ def delete(user_id):
     # Delete user
     db.session.delete(user)
     db.session.commit()
-    return jsonify({"success": "User deleted successfully!"})
+    return jsonify({"success": "User deleted successfully!"}), 204
 
 
 if __name__ == '__main__':

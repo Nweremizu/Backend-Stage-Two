@@ -32,6 +32,7 @@ operations on individuals' data.
     ```python app.py```
 ## API Endpoints
 ### Create Person
+- **Request type:** POST
 - **Endpoint:** `/api`
 - **Description:** Create a new person.
 - **Request Format**
@@ -54,84 +55,113 @@ operations on individuals' data.
     }
     ```
 ### Get Person Details
-- **Endpoint:** `GET /api/<user_id>`
+- **Request type:** GET
+- **Endpoint:** `/api/<user_id>`
 - **Description:** Retrieve details of a person by their ID.
 - **Request Format:** None required.
 - **Response Format:**
-- Status Code: 200 (OK)
-- Body:
-```json
-{
-"id": 1,
-"name": "John Doe",
-"email": "john@example.com"
-}
-```
+    - Status Code: 200 (OK)
+    - Body:
+    ```json
+    {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com"
+    }
+    ```
 ### Update a Person
+- **Request type:** PATCH
 - **Endpoint:** `PUT /api/<user_id>`
 - **Description:** Update details of an existing person.
 - **Request Format:**
-- Content-Type: `application/json`
-- Body:
-```json
-{
-"name": "Updated John Doe",
-"email": "updated_john@example.com"
-}
-```
+    - Body:
+    ```json
+    {
+    "name": "Updated John Doe",
+    "email": "updated_john@example.com"
+    }
+    ```
 - **Response Format:**
-- Status Code: 200 (OK)
-- Body:
-```json
-{
-"id": 1,
-"name": "Updated John Doe",
-"email": "updated_john@example.com"
-}
-```
+    - Status Code: 200 (OK)
+    - Body:
+    ```json
+    {
+    "id": 1,
+    "name": "Updated John Doe",
+    "email": "updated_john@example.com"
+    }
+    ```
 ### Delete a Person
+- **Request type:** DELETE
 - **Endpoint:** `DELETE /api/<user_id>`
 - **Description:** Remove a person.
 - **Request Format:** None required.
 - **Response Format:** No content (204 No Content)
-## Request/Response Formats
+## Request and Response Formats
 - **Request Format:**
-- Content-Type: `application/json`
-- All API endpoints accept and return data in JSON format.
+    - JSON format is used for all data exchanges with the API endpoints.
 - **Response Format:**
-- Successful responses return data in JSON format.
-- Errors are returned with appropriate HTTP status codes and error messages in JSON format.
+    - Successful responses provide data in JSON format.
+    - Errors are conveyed through suitable HTTP status codes and accompanied by error messages in JSON format.
 ## Sample Usage
 Here are some example API requests:
 - Create a new person:
-```http
-POST https://hngx-backend-track-task2.onrender.com/api
-Content-Type: application/json
-{
-"name": "John Doe",
-"email": "john@example.com"
+```python
+import requests
+
+url = "https://hngx-stage-two-6m3a.onrender.com/api"
+data = {
+    "name": "John Doe",
+    "email": "john@example.com"
 }
+headers = {"Content-Type": "application/json"}
+
+response = requests.post(url, json=data, headers=headers)
+print(response.status_code)
+print(response.json())
 ```
 - Retrieve details of a person:
-```http
-GET https://hngx-backend-track-task2.onrender.com/api/2
+```python
+import requests
+
+url = "https://hngx-stage-two-6m3a.onrender.com/api/2"
+
+response = requests.get(url)
+print(response.status_code)
+print(response.json())
 ```
 - Update details of a person:
-```http
-PUT https://hngx-backend-track-task2.onrender.com/api/2
-Content-Type: application/json
-{
-"name": "Updated John Doe",
-"email": "updated_john@example.com"
+```python
+import requests
+
+url = "https://hngx-stage-two-6m3a.onrender.com/api/2"
+data = {
+    "name": "Updated John Doe",
+    "email": "updated_john@example.com"
 }
+headers = {"Content-Type": "application/json"}
+
+response = requests.put(url, json=data, headers=headers)
+print(response.status_code)
+print(response.json())
 ```
 - Remove a person:
-```http
-DELETE https://hngx-backend-track-task2.onrender.com/api/2
+```python
+import requests
+
+url = "https://hngx-stage-two-6m3a.onrender.com/api/2"
+
+response = requests.delete(url)
+print(response.status_code)
+print(response.json())
+
 ```
+For more information about the API, check out the [Postman Documentation](https://documenter.getpostman.com/view/29556247/2s9YC5xXVo)
+
 ## Limitations
-- This API is a simple example and may not cover all possible use cases.
-- Error handling is limited to basic validation checks.
+- The API assumes that email addresses are unique, and it checks for email uniqueness when creating a new user.
+- Error handling for invalid inputs is limited to basic checks
+-The API does not currently support authentication or authorization for user operations.
 ## Setup Instructions
 For detailed instructions on how to set up, run, and use this API, please refer to the
 [README](README.md) file.
