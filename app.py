@@ -52,12 +52,13 @@ def create():
     except SQLAlchemyError as e:
         if 'UNIQUE constraint failed' in str(e):
             return jsonify({"error": "Email already exists"}), 400
-    return jsonify( success= {
-        'success': 'User created successfully!',
-        'name': name,
-        'age': age,
-        'email': email
-    })
+    else:
+        return jsonify( success= {
+            'success': 'User created successfully!',
+            'name': name,
+            'age': age,
+            'email': email
+        })
 
 
 @app.route('/api/<int:user_id>', methods=['GET'])

@@ -35,5 +35,5 @@ def api_delete_person(id:int):
 
 
 api_create_person(name='Mark', email='br12@gmail.com', age=20)
-api_read_person(id=1)
+api_read_person(id=2)
 
