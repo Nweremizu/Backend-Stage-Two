@@ -50,9 +50,9 @@ By default, the API will be accessible at `http://localhost:5000` for a Local DB
 ```python
 BASE_URL = 'http://localhost:8000/api'
  data ={
-        'name': 'Mar',
-        'email':email,
-        'age': age
+        'name': 'Mark Essien',
+        'email':'markessien123@gmail.com',
+        'age': 32
     }
     response = requests.post(url=BASE_URL, data=data)
     print(response.json())
@@ -72,8 +72,6 @@ BASE_URL = 'http://localhost:8000/api'
     user_id = 1
     BASE_URL = 'http://localhost:8000/api/'
     data ={
-        'name': name,
-        'email':email,
-        'age': age
+        'age': 35 
     }
 ```
