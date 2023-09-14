@@ -86,9 +86,12 @@ def update(user_id):
     age = request.form.get('age')
     parameter_check(name, user.age, email) 
     # Update user
-    user.name = name
-    user.email = email
-    user.age = age
+    if name != None:
+        user.name = name
+    if email != None:
+        user.email = email
+    if age != None:
+        user.age = age
     db.session.commit()
     return jsonify({
         'success': 'User updated successfully!',

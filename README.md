@@ -50,7 +50,7 @@ By default, the API will be accessible at `http://localhost:5000` for a Local DB
 ```python
 BASE_URL = 'http://localhost:8000/api'
  data ={
-        'name': name,
+        'name': 'Mar',
         'email':email,
         'age': age
     }
@@ -65,4 +65,15 @@ BASE_URL = 'http://localhost:8000/api'
     BASE_URL = 'http://localhost:8000/api/'
     response = requests.get(url=f'{BASE_URL}/{user_id}')
     print(response.json())
+```
+* Update Details of a person
+    #### Endpoint : '/api/<int:user_id>'
+```python
+    user_id = 1
+    BASE_URL = 'http://localhost:8000/api/'
+    data ={
+        'name': name,
+        'email':email,
+        'age': age
+    }
 ```
