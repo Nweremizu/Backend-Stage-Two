@@ -155,7 +155,7 @@ print(response.status_code)
 print(response.json())
 
 ```
-For more information about the API, check out the [Postman Documentation](https://documenter.getpostman.com/view/29556247/2s9YC5xXVo)
+For more a more detailed documentation of the API, check out the [Postman Documentation](https://documenter.getpostman.com/view/29556247/2s9YC5xXVo)
 
 ## Limitations
 - The API assumes that email addresses are unique, and it checks for email uniqueness when creating a new user.

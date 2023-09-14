@@ -49,13 +49,13 @@ By default, the API will be accessible at `http://localhost:5000` for a Local DB
     ##### Endpoint : '/api'
 ```python
 BASE_URL = 'http://localhost:8000/api'
- data ={
+data ={
         'name': 'Mark Essien',
         'email':'markessien123@gmail.com',
         'age': 32
     }
-    response = requests.post(url=BASE_URL, data=data)
-    print(response.json())
+response = requests.post(url=BASE_URL, data=data)
+print(response.json())
 ```
 
 * Get details of a person
