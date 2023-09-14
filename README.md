@@ -1,6 +1,7 @@
 # Backend-Stage-Two
 
 ## FLASK CRUD API
+
     A simple CRUD API with a datbase.
 
 ## Prerequisites
@@ -31,3 +32,6 @@ Before you begin, ensure you have met the following requirements:
 ## Usage
 ### Running the Api
 
+To run the API, execute the following command from the project directory:
+    ```python app.py```
+By default, the API will be accessible at `http://localhost:5000` for a Local DB
