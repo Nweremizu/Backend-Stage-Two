@@ -46,7 +46,7 @@ By default, the API will be accessible at `http://localhost:5000` for a Local DB
 
 ### Example Requests
 * Create a new person:
-    Endpoint = '/api'
+    ##### Endpoint : '/api'
 ```python
 BASE_URL = 'http://localhost:8000/api'
  data ={
@@ -59,7 +59,7 @@ BASE_URL = 'http://localhost:8000/api'
 ```
 
 * Get details of a person
-    ###### Endpoint = '/api/<int:user_id>'
+    ##### Endpoint : '/api/<int:user_id>'
 ```python
     user_id = 1
     BASE_URL = 'http://localhost:8000/api/'
