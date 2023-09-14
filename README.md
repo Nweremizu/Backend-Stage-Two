@@ -86,3 +86,13 @@ BASE_URL = 'http://localhost:8000/api'
     response = requests.delete(url=f'{BASE_URL}/{user_id}')
     print(response.json())
 ```
+
+## Documentation
+
+For more information about the API, check out the [Documentation](https://documenter.getpostman.com/view/12345678/Tz5qZz1o)
+
+## Built With
+
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The web framework used
+- [SQLAlchemy](https://www.sqlalchemy.org/) - Database ORM
+- [PostgreSQL](https://www.postgresql.org/) - Database
